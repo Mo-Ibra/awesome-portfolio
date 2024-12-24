@@ -4,6 +4,7 @@ import AboutMe from '@/components/AboutMe';
 import Tools from '@/components/Tools';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+import ToggleThemeButton from '@/components/ToggleThemeButton';
 
 function Home() {
 
@@ -15,6 +16,7 @@ function Home() {
       <Tools />
       <Projects />
       <Contact />
+      <ToggleThemeButton />
     </div>
   );
 }
