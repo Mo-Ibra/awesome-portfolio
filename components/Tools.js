@@ -1,3 +1,5 @@
+"use client";
+
 const Tools = () => {
   return (
     <section className="py-40 bg-gray-50 dark:bg-gray-900">

@@ -1,3 +1,5 @@
+"use client";
+
 import { FaDev, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Contact = () => {
