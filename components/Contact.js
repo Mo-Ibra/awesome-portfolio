@@ -1,8 +1,42 @@
 "use client";
 
+import { useState } from "react";
 import { FaDev, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
+import { toast, ToastContainer } from "react-toastify";
+
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const formSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name,
+      email,
+      message,
+    };
+
+    const response = await fetch(process.env.NEXT_PUBLIC_GETFORM_API_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok === true) {
+      setName("");
+      setEmail("");
+      setMessage("");
+      window.open("https://getform.io/thank-you", "_blank")
+
+      toast.success("Message sent successfully!", { position: "bottom-right" });
+    }
+  };
+
   return (
     <section className="py-40 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6 lg:px-20">
@@ -58,7 +92,10 @@ const Contact = () => {
           </div>
 
           {/* Right Side: Contact Form */}
-          <form className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-12 space-y-6">
+          <form
+            onSubmit={formSubmit}
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-12 space-y-6"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label
@@ -70,8 +107,10 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  value={name}
                   className="mt-1 block w-full px-4 py-2 text-gray-800 bg-gray-100 dark:bg-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   placeholder="Your Name"
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
 
@@ -85,8 +124,10 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  value={email}
                   className="mt-1 block w-full px-4 py-2 text-gray-800 bg-gray-100 dark:bg-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   placeholder="Your Email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -101,10 +142,15 @@ const Contact = () => {
               <textarea
                 id="message"
                 rows="8"
+                value={message}
                 className="mt-1 block w-full px-4 py-2 text-gray-800 bg-gray-100 dark:bg-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                 placeholder="Your Message"
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
+
+            {/* Hidden Input */}
+            <input type="hidden" name="_gotcha" className="hidden" />
 
             <button
               type="submit"
@@ -112,6 +158,7 @@ const Contact = () => {
             >
               Send Message
             </button>
+            <ToastContainer />
           </form>
         </div>
       </div>
