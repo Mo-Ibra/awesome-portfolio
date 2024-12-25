@@ -5,6 +5,7 @@ import Tools from '@/components/Tools';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import ToggleThemeButton from '@/components/ToggleThemeButton';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 function Home() {
 
@@ -17,6 +18,7 @@ function Home() {
       <Projects />
       <Contact />
       <ToggleThemeButton />
+      <ScrollToTopButton />
     </div>
   );
 }
