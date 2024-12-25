@@ -5,6 +5,8 @@ import { FaDev, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 import { toast, ToastContainer } from "react-toastify";
 
+import ContactIcon from '@/components/ContactIcon';
+
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -53,41 +55,10 @@ const Contact = () => {
 
             {/* Social Icons */}
             <div className="mt-8 flex space-x-6">
-              <a
-                href="https://github.com/Mo-Ibra"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-              >
-                <FaGithub className="w-6 h-6" />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/mohamed-ibrahim-30x/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-              >
-                <FaLinkedin className="w-6 h-6" />
-              </a>
-
-              <a
-                href="https://x.com/MoIbrraa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-              >
-                <FaTwitter className="w-6 h-6" />
-              </a>
-
-              <a
-                href="https://dev.to/moibra"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-              >
-                <FaDev className="w-6 h-6" />
-              </a>
+              <ContactIcon icon={<FaGithub className="w-6 h-6" />} link={"https://github.com/moibra"} />
+              <ContactIcon icon={<FaLinkedin className="w-6 h-6" />} link={"https://www.linkedin.com/in/mohamed-ibrahim-30x/"} />
+              <ContactIcon icon={<FaTwitter className="w-6 h-6" />} link={"https://x.com/MoIbrraa"} />
+              <ContactIcon icon={<FaDev className="w-6 h-6" />} link={"https://dev.to/moibra"} />
             </div>
           </div>
 
