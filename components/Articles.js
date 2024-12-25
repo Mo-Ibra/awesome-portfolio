@@ -13,7 +13,7 @@ const Articles = () => {
     const fetchArticles = async () => {
       try {
         const response = await fetch(
-          "https://dev.to/api/articles?username=moibra"
+          `https://dev.to/api/articles?username=${process.env.NEXT_PUBLIC_DEVTO_USERNAME}`
         );
 
         if (response.ok) {
