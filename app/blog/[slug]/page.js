@@ -17,6 +17,7 @@ import python from 'highlight.js/lib/languages/python';
 import css from 'highlight.js/lib/languages/css';
 import typescript from 'highlight.js/lib/languages/typescript';
 import 'highlight.js/styles/vs2015.css'; // Change theme
+import ArticleStats from "../../../components/ArticleStats";
 
 // Register languages
 hljs.registerLanguage('javascript', javascript);
@@ -41,6 +42,7 @@ const Page = () => {
           );
           const data = await response.json();
           setArticle(data);
+          console.log(data);
         } catch (err) {
           console.log(err);
         } finally {
@@ -108,6 +110,12 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+      <ArticleStats
+        reactions={article.public_reactions_count}
+        comments={article.comments_count}
+      />
+
       <ToggleThemeButton />
       <ScrollToTopButton />
     </div>
