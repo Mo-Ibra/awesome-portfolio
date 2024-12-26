@@ -1,0 +1,7 @@
+0.Fix Single Article Page Issues.
+1.Loading Spinner For Articles fetch and single Article
+2.Create About Page
+3.Create Contact Us Page With Stats from DEV.to
+4.Create Download CV Button
+5.Create Buttons to contact in header under buttons and Include YouTube channel
+6.Add On Scroll Animations

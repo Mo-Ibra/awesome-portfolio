@@ -10,8 +10,19 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 import DOMPurify from "dompurify";
-import hljs from "highlight.js";
-import "highlight.js/styles/github.css";
+
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
+import python from 'highlight.js/lib/languages/python';
+import css from 'highlight.js/lib/languages/css';
+import typescript from 'highlight.js/lib/languages/typescript';
+import 'highlight.js/styles/vs2015.css'; // Change theme
+
+// Register languages
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('python', python);
+hljs.registerLanguage('css', css);
+hljs.registerLanguage('typescript', typescript);
 
 const Page = () => {
   const { slug } = useParams();
@@ -46,13 +57,14 @@ const Page = () => {
       const sanitizedHTML = DOMPurify.sanitize(article.body_html);
       setSanitizedContent(sanitizedHTML);
 
-      // Highlight all code blocks after the content has been sanitized and injected
-      const blocks = document.querySelectorAll("pre code");
-      blocks.forEach((block) => {
-        hljs.highlightBlock(block);
-      });
+      // Wait for next tick to ensure DOM is updated
+      setTimeout(() => {
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightElement(block);
+        });
+      }, 0);
     }
-  }, [article.body_html]);
+  }, [article.body_html, loading]);
 
   if (loading) {
     return (
@@ -66,7 +78,7 @@ const Page = () => {
     <div>
       <Navbar className="top-2" />
       <section className="py-40 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-6 lg:px-20">
+        <div className="mx-auto container px-6 lg:px-20">
           <SectionHeader title={article.title} desc="" />
 
           <div className="flex items-center mb-6 text-sm text-gray-600 dark:text-gray-400">
@@ -77,7 +89,7 @@ const Page = () => {
             <span>{article.reading_time_minutes} min read</span>
           </div>
 
-          <div className="py-10">
+          <div className="py-10  prose-container">
             <div
               className="prose dark:prose-invert"
               dangerouslySetInnerHTML={{ __html: sanitizedContent }}
