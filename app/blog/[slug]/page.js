@@ -16,8 +16,9 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
 import css from 'highlight.js/lib/languages/css';
 import typescript from 'highlight.js/lib/languages/typescript';
-import 'highlight.js/styles/vs2015.css'; // Change theme
+import 'highlight.js/styles/vs2015.css';
 import ArticleStats from "../../../components/ArticleStats";
+import Comments from "../../../components/Comments";
 
 // Register languages
 hljs.registerLanguage('javascript', javascript);
@@ -29,10 +30,12 @@ const Page = () => {
   const { slug } = useParams();
 
   const [article, setArticle] = useState([]);
+  const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const [sanitizedContent, setSanitizedContent] = useState("");
 
+  // Fetch Article
   useEffect(() => {
     if (slug) {
       const fetchArticle = async () => {
@@ -52,6 +55,27 @@ const Page = () => {
       fetchArticle();
     }
   }, [slug]);
+
+  // Fetch Comment
+  useEffect(() => {
+    if (article.id) {
+      const fetchComments = async () => {
+        try {
+
+          const response = await fetch(`https://dev.to/api/comments?a_id=${article.id}`);
+
+          const data = await response.json();
+          setComments(data);
+          console.log(data);
+
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      fetchComments();
+    };
+  }, [article.id]);
+
 
   useEffect(() => {
     if (!loading) {
@@ -91,7 +115,7 @@ const Page = () => {
             <span>{article.reading_time_minutes} min read</span>
           </div>
 
-          <div className="py-10  prose-container">
+          <div className="py-10 prose-container">
             <div
               className="prose dark:prose-invert"
               dangerouslySetInnerHTML={{ __html: sanitizedContent }}
@@ -107,6 +131,10 @@ const Page = () => {
                 <span>{article.comments_count} comments</span>
               </div>
             </div>
+
+            {/* Comments */}
+            <Comments comments={comments} />
+
           </div>
         </div>
       </section>
