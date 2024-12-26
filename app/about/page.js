@@ -1,20 +1,16 @@
-import Navbar from "@/components/Navbar";
-
+import Navbar from '@/components/Navbar';
 import ToggleThemeButton from '@/components/ToggleThemeButton';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
-import Articles from "@/components/Articles";
-import Contact from '@/components/Contact';
 
-const BlogPage = () => {
+const AboutPage = () => {
   return (
     <div>
       <Navbar className="top-2" />
-      <Articles />
-      <Contact />
+      <h1>About</h1>
       <ToggleThemeButton />
       <ScrollToTopButton />
     </div>
-  );
+  )
 };
 
-export default BlogPage;
+export default AboutPage;

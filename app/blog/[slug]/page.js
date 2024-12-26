@@ -27,7 +27,7 @@ hljs.registerLanguage('python', python);
 hljs.registerLanguage('css', css);
 hljs.registerLanguage('typescript', typescript);
 
-const Page = () => {
+const SingleArticlePage = () => {
   const { slug } = useParams();
 
   const [article, setArticle] = useState([]);
@@ -151,4 +151,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default SingleArticlePage;
