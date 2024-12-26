@@ -1,5 +1,5 @@
 0.Fix Single Article Page Issues. (Done)
-1.Loading Spinner For Articles fetch and single Article
+1.Loading Spinner For Articles fetch and single Article (Done)
 2.Create About Page
 3.Create Contact Us Page With Stats from DEV.to
 4.Create Download CV Button
