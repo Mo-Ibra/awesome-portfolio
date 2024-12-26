@@ -24,7 +24,7 @@ const ArticleStats = ({ reactions, comments }) => {
         opacity: isVisible ? 1 : 0,
       }}
       transition={{ duration: 3, type: "spring" }}
-      className="fixed bottom-0 left-0 right-0 mb-6 z-50 flex justify-center px-4"
+      className="fixed bottom-0 left-0 right-0 mb-6 z-40 flex justify-center px-4"
     >
       <div className="flex items-center space-x-6 bg-white dark:bg-gray-800 px-6 py-3 rounded shadow-lg">
         <div className="flex items-center space-x-2 cursor-pointer">

@@ -11,7 +11,7 @@ const ToggleThemeButton = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed bottom-6 right-6 flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 shadow-lg"
+      className="fixed bottom-6 right-6 flex items-center justify-center z-50 w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 shadow-lg"
       aria-label="Toggle Theme"
     >
       {theme === "dark" ? (
