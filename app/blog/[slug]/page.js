@@ -17,8 +17,9 @@ import python from 'highlight.js/lib/languages/python';
 import css from 'highlight.js/lib/languages/css';
 import typescript from 'highlight.js/lib/languages/typescript';
 import 'highlight.js/styles/vs2015.css';
-import ArticleStats from "../../../components/ArticleStats";
-import Comments from "../../../components/Comments";
+import ArticleStats from "@/components/ArticleStats";
+import Comments from "@/components/Comments";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 // Register languages
 hljs.registerLanguage('javascript', javascript);
@@ -95,7 +96,7 @@ const Page = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <p>Loading article...</p>
+        <LoadingSpinner />
       </div>
     );
   }
@@ -133,7 +134,7 @@ const Page = () => {
             </div>
 
             {/* Comments */}
-            <Comments comments={comments} />
+            { comments && comments.length > 0 && <Comments comments={comments} /> }
 
           </div>
         </div>

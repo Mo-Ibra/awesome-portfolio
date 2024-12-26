@@ -1,4 +1,4 @@
-0.Fix Single Article Page Issues.
+0.Fix Single Article Page Issues. (Done)
 1.Loading Spinner For Articles fetch and single Article
 2.Create About Page
 3.Create Contact Us Page With Stats from DEV.to

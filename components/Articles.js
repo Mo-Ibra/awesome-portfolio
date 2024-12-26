@@ -3,6 +3,7 @@
 import SectionHeader from "@/components/SectionHeader";
 import ArticleCard from "@/components/ArticleCard";
 import { useEffect, useState } from "react";
+import LoadingSpinner from "./LoadingSpinner";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -38,9 +39,7 @@ const Articles = () => {
             title="Articles"
             desc="Here are some of the articles I've written."
           />
-          <p className="mt-12 text-center text-gray-600 dark:text-gray-400">
-            Loading articles...
-          </p>
+          <LoadingSpinner />
         </div>
       </section>
     );
