@@ -37,7 +37,7 @@ const Articles = () => {
         <div className="container mx-auto px-6 lg:px-20">
           <SectionHeader
             title="Articles"
-            desc="Here are some of the articles I've written."
+            desc="Here are some of the articles I've written..."
           />
           <LoadingSpinner />
         </div>
