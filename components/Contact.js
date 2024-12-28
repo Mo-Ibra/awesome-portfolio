@@ -49,7 +49,7 @@ const Contact = () => {
             </h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 w-3/4">
               Feel free to reach out to me via the form or connect with me on my
-              social profiles, We can discuss about anything you want. And I'm
+              social profiles, We can discuss about anything you want. And I&apos;m
               open to work as freelancer as well.
             </p>
 

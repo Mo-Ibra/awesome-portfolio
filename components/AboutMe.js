@@ -30,13 +30,13 @@ const AboutMe = () => {
           </motion.h2>
         </HeroHighlight>
         <p className="mt-6 text-lg text-center text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Hello! I'm Mohamed Ibrahim, a passionate Full Stack Developer
+          Hello! I&apos;m Mohamed Ibrahim, a passionate Full Stack Developer
           dedicated to crafting efficient and user-friendly web applications.
           With over{" "}
           <span className="font-semibold text-blue-600 dark:text-blue-400">
             3 years of experience
           </span>
-          , I've completed{" "}
+          , I&apos;ve completed{" "}
           <span className="font-semibold text-blue-600 dark:text-blue-400">
             15+ successful projects
           </span>{" "}
