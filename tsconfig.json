@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Card.js", "components/Navbar.js", "app/layout.js", "app/page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Card.js", "components/Navbar.js", "app/layout.js", "app/page.js", "components/ui/navbar-menu.js", "components/ui/hero-highlight.js", "components/ui/button.js", "components/ui/bento-grid.js", "components/ui/3d-card.js"],
   "exclude": ["node_modules"]
 }

@@ -11,7 +11,7 @@ function Header() {
 
         <div className="space-y-6 text-center md:text-left flex-1 flex flex-col justify-center">
           <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200">
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="text-blue-600 dark:text-blue-400">
               Mohamed Ibrahim
             </span>

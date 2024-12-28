@@ -3,9 +3,6 @@ import { cn } from "@/lib/utils";
 export const BentoGrid = ({
   className,
   children,
-}: {
-  className?: string;
-  children?: React.ReactNode;
 }) => {
   return (
     <div
@@ -25,12 +22,6 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
-}: {
-  className?: string;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
-  header?: React.ReactNode;
-  icon?: React.ReactNode;
 }) => {
   return (
     <div

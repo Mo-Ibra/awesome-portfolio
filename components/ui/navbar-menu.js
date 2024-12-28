@@ -18,11 +18,6 @@ export const MenuItem = ({
   active,
   item,
   children,
-}: {
-  setActive: (item: string) => void;
-  active: string | null;
-  item: string;
-  children?: React.ReactNode;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
@@ -63,9 +58,6 @@ export const MenuItem = ({
 export const Menu = ({
   setActive,
   children,
-}: {
-  setActive: (item: string | null) => void;
-  children: React.ReactNode;
 }) => {
   return (
     <nav
@@ -82,11 +74,6 @@ export const ProductItem = ({
   description,
   href,
   src,
-}: {
-  title: string;
-  description: string;
-  href: string;
-  src: string;
 }) => {
   return (
     <Link href={href} className="flex space-x-2">
@@ -109,7 +96,7 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, ...rest }) => {
   return (
     <Link
       {...rest}
