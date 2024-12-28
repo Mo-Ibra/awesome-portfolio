@@ -1,7 +1,8 @@
 0.Fix Single Article Page Issues. (Done)
 1.Loading Spinner For Articles fetch and single Article (Done)
-2.Create About Page
-3.Create Contact Us Page With Stats from DEV.to
+2.Create About Page (Done)
+3.Create Contact Us Page (done)
 4.Create Download CV Button
 5.Create Buttons to contact in header under buttons and Include YouTube channel
 6.Add On Scroll Animations
+7.Create Project Page with Slider and when click on every project open a Model And tell us about features of it.

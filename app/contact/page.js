@@ -7,6 +7,7 @@ const ContactPage = () => {
   return (
     <div>
       <Navbar className="top-2" />
+      <div className="h-32 bg-gray-50 dark:bg-gray-900"></div>
       <Contact />
       <ToggleThemeButton />
       <ScrollToTopButton />
