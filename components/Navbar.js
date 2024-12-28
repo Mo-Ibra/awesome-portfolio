@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import {
   HoveredLink,
   Menu,
-  MenuItem,
-  ProductItem,
 } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 
