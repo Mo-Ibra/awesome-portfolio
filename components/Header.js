@@ -39,7 +39,7 @@ function Header() {
         {/* Image */}
         <div className="hidden lg:block flex-1">
           <Image
-            src="/images/hero-banner.png"
+            src="/images/hero.png"
             width={656}
             height={800}
             alt="Hero Image"
