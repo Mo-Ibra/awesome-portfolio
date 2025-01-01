@@ -46,9 +46,8 @@ const SingleArticlePage = () => {
           );
           const data = await response.json();
           setArticle(data);
-          console.log(data);
         } catch (err) {
-          console.log(err);
+          console.error(err);
         } finally {
           setLoading(false);
         }

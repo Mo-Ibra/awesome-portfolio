@@ -55,10 +55,10 @@ const Contact = () => {
 
             {/* Social Icons */}
             <div className="mt-8 flex space-x-6">
-              <ContactIcon icon={<FaGithub className="w-6 h-6" />} link={"https://github.com/Mo-Ibra"} />
-              <ContactIcon icon={<FaLinkedin className="w-6 h-6" />} link={"https://www.linkedin.com/in/mohamed-ibrahim-30x/"} />
-              <ContactIcon icon={<FaTwitter className="w-6 h-6" />} link={"https://x.com/MoIbrraa"} />
-              <ContactIcon icon={<FaDev className="w-6 h-6" />} link={"https://dev.to/moibra"} />
+              <ContactIcon icon={<FaGithub className="w-6 h-6" />} link={"https://github.com/Mo-Ibra"} ariaLabel="Visit my GitHub profile" />
+              <ContactIcon icon={<FaLinkedin className="w-6 h-6" />} link={"https://www.linkedin.com/in/mohamed-ibrahim-30x/"} ariaLabel="Visit my LinkedIn profile" />
+              <ContactIcon icon={<FaTwitter className="w-6 h-6" />} link={"https://x.com/MoIbrraa"} ariaLabel="Visit my Twitter profile" />
+              <ContactIcon icon={<FaDev className="w-6 h-6" />} link={"https://dev.to/moibra"} ariaLabel="Visit my Dev.to profile" />
             </div>
           </div>
 
