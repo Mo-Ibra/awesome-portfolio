@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 function Navbar({ className }) {
   const [active, setActive] = useState(null);
+  console.log(active);
 
   return (
     <div
