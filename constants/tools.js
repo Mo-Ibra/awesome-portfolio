@@ -46,7 +46,31 @@ const Tools = [
     imageUrl: "/images/tools/mongodb.svg",
     name: "MongoDB",
     desc: "Database",
-  }
+  },
+  {
+    id: 9,
+    imageUrl: "/images/tools/html-5.svg",
+    name: "HTML5",
+    desc: "Markup Language",
+  },
+  {
+    id: 10,
+    imageUrl: "/images/tools/python.svg",
+    name: "Python",
+    desc: "Programming Language",
+  },
+  {
+    id: 11,
+    imageUrl: "/images/tools/next-js.svg",
+    name: "Next.js",
+    desc: "React Framework",
+  },
+  {
+    id: 12,
+    imageUrl: "/images/tools/mysql.svg",
+    name: "MySQL",
+    desc: "Database",
+  },
 ]
 
 export default Tools;
