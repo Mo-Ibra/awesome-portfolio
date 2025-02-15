@@ -50,17 +50,17 @@ const ArticleCard = ({
 
       {/* Reactions and Comments */}
       <div className="my-3 flex items-center text-gray-600 dark:text-gray-400 text-sm space-x-4">
-        <div className="flex items-center">
+        <div className="flex items-center text-xs">
           <FaHeart className="mr-2 text-red-500" />
           <span>{reactions} reactions</span>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center text-xs">
           <FaComment className="mr-2 text-blue-500" />
           <span>{comments} comments</span>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center text-xs">
           <FaClock className="mr-2 text-blue-500" />
           <span>{readTime} min read</span>
         </div>
