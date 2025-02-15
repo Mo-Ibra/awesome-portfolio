@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-40 bg-gray-50 dark:bg-gray-900">
+    <section className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>

@@ -33,7 +33,7 @@ const Articles = () => {
 
   if (loading) {
     return (
-      <section className="py-40 bg-gray-50 dark:bg-gray-900">
+      <section className="py-32 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-6 lg:px-20">
           <SectionHeader
             title="Articles"
@@ -47,7 +47,7 @@ const Articles = () => {
 
   if (error) {
     return (
-      <section className="py-40 bg-gray-50 dark:bg-gray-900">
+      <section className="py-32 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-6 lg:px-20">
           <SectionHeader
             title="Articles"
@@ -62,7 +62,7 @@ const Articles = () => {
   }
 
   return (
-    <section className="py-40 bg-gray-50 dark:bg-gray-900">
+    <section className="py-32 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6 lg:px-20">
         <SectionHeader
           title="Articles"

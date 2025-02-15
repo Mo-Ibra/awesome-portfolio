@@ -15,7 +15,8 @@ const ArticleCard = ({
 }) => {
   return (
     <div className="items-center lg:items-start bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition hover:shadow-lg gap-4">
-      {/* Left - Image */}
+      
+      {/* Image */}
       <div className="w-full">
         <Link href={`/blog/${slug}`}>
           <Image
@@ -39,7 +40,7 @@ const ArticleCard = ({
       {/* Title and Description */}
       <div className="my-3">
         <Link href={`/blog/${slug}`}>
-          <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
+          <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 line-clamp-2">
             {title}
           </h3>
         </Link>
