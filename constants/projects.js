@@ -10,7 +10,7 @@ const myProject = [
   },
   {
     id: 2,
-    title: "Next Car Renting Platform",
+    title: "MoRENT - Car Renting Platform",
     desc: "A modern car rental platform built with cutting-edge technologies to provide a seamless vehicle rental experience.",
     imageSrc: "/images/projects/project-2.png",
     link: "https://next-car-renting-platform.vercel.app/",
@@ -19,7 +19,7 @@ const myProject = [
   },
   {
     id: 3,
-    title: "Next Travel Website",
+    title: "TravelBea - Travel Website",
     desc: "A modern, fully responsive Travel Website built using Next.js, designed to help users explore destinations, book trips, etc.",
     imageSrc: "/images/projects/project-3.png",
     link: "https://next-travel-beta.vercel.app/",
@@ -28,12 +28,12 @@ const myProject = [
   },
   {
     id: 4,
-    title: "Full Stack Crud Application",
-    desc: "This is a full stack web application for create, edit, delete, update approach .. I Hope You enjoy it",
-    imageSrc: "/images/projects/project-4.jpg",
-    link: "https://example.com/project1",
-    demoUrl: "https://github.com",
-    gitUrl: "https://github.com",
+    title: "NoNID - Creative Agency",
+    desc: "This is a landing page built with React.js for an agency looking to boost traffic and increase conversions.",
+    imageSrc: "/images/projects/project-4.png",
+    link: "https://nonid-react.vercel.app/",
+    demoUrl: "https://nonid-react.vercel.app/",
+    gitUrl: "https://github.com/Mo-Ibra/nonid-react",
   },
   {
     id: 5,
