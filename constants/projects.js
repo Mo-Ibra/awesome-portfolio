@@ -19,12 +19,12 @@ const myProject = [
   },
   {
     id: 3,
-    title: "Full Stack Crud Application",
-    desc: "This is a full stack web application for create, edit, delete, update approach .. I Hope You enjoy it",
-    imageSrc: "/images/projects/project-3.jpg",
-    link: "https://example.com/project1",
-    demoUrl: "https://github.com",
-    gitUrl: "https://github.com",
+    title: "Next Travel Website",
+    desc: "A modern, fully responsive Travel Website built using Next.js, designed to help users explore destinations, book trips, etc.",
+    imageSrc: "/images/projects/project-3.png",
+    link: "https://next-travel-beta.vercel.app/",
+    demoUrl: "https://next-travel-beta.vercel.app/",
+    gitUrl: "https://github.com/Mo-Ibra/next-travel",
   },
   {
     id: 4,
