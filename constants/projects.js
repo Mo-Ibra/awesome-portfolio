@@ -46,12 +46,12 @@ const myProject = [
   },
   {
     id: 6,
-    title: "Full Stack Crud Application",
-    desc: "This is a full stack web application for create, edit, delete, update approach .. I Hope You enjoy it",
-    imageSrc: "/images/projects/project-6.jpg",
-    link: "https://example.com/project1",
-    demoUrl: "https://github.com",
-    gitUrl: "https://github.com",
+    title: "Coursera - Online Course Marketplace",
+    desc: "Next-Corsera is a fully featured platform designed for selling and enrolling in online courses. Inspired by Udemy and Coursera",
+    imageSrc: "/images/projects/project-6.png",
+    link: "https://next-corsera.vercel.app/",
+    demoUrl: "https://next-corsera.vercel.app/",
+    gitUrl: "https://github.com/Mo-Ibra/next-corsera",
   }
 ]
 
