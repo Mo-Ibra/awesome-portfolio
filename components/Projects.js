@@ -8,7 +8,7 @@ import SectionHeader from '@/components/SectionHeader';
 
 const Projects = () => {
   return (
-    <section className="py-40 bg-gray-50 dark:bg-gray-900" id="projects">
+    <section className="py-16 bg-gray-50 dark:bg-gray-900" id="projects">
       <div className="container mx-auto px-6 lg:px-20">
 
         <SectionHeader title="Projects I Did" desc="Here are some of the projects I've worked on." />

@@ -6,8 +6,8 @@ import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 
 const AboutMe = () => {
   return (
-    <section className="pt-40 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-6 lg:px-20 shadow-lg p-8 rounded-lg">
+    <section className="py-40 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto px-6 lg:px-20 p-8 rounded-lg">
         <HeroHighlight>
           <motion.h2
             initial={{
@@ -24,9 +24,7 @@ const AboutMe = () => {
             }}
             className="text-4xl lg:text-5xl font-extrabold text-center text-blue-600 dark:text-blue-400"
           >
-            <Highlight className="text-black dark:text-white">
-              About Me
-            </Highlight>
+            <Highlight className="text-black dark:text-white">About Me</Highlight>
           </motion.h2>
         </HeroHighlight>
         <p className="mt-6 text-lg text-center text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
@@ -49,34 +47,63 @@ const AboutMe = () => {
         </p>
 
         {/* Stats Section */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div
+          id="stats-section"
+          className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+        >
           {/* Stat 1 */}
-          <div>
+          <motion.div
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }} // Only trigger the animation once when it enters the view
+          >
             <h3 className="text-4xl font-extrabold text-blue-600 dark:text-blue-400">
               3+
             </h3>
             <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
               Years of Experience
             </p>
-          </div>
+          </motion.div>
+
           {/* Stat 2 */}
-          <div>
+          <motion.div
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-4xl font-extrabold text-blue-600 dark:text-blue-400">
               15+
             </h3>
             <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
               Projects Completed
             </p>
-          </div>
+          </motion.div>
+
           {/* Stat 3 */}
-          <div>
+          <motion.div
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-4xl font-extrabold text-blue-600 dark:text-blue-400">
               20+
             </h3>
             <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
               Articles Published
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
