@@ -7,6 +7,10 @@
   --dark: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--white);
   color: var(--dark);

@@ -22,7 +22,7 @@ function Header() {
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
             <a
-              href="#portfolio"
+              href="#projects"
               className="px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
             >
               View My Work
